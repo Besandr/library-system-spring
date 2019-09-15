@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name = "hibernate.dialect"> org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name = "hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name ="hibernate.connection.url">jdbc:mysql://localhost:3306/library_system?createDatabaseIfNotExist=true&amp;allowMultiQueries=true&amp;serverTimezone=UTC</property>
+        <property name = "hibernate.connection.username">andrey</property>
+        <property name = "hibernate.connection.password">fancyPa55w0rd</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">false</property>
+
+        <mapping class="com.besandr.repository.entities.Author" />
+        <mapping class="com.besandr.repository.entities.Book" />
+        <mapping class="com.besandr.repository.entities.Keyword" />
+        <mapping class="com.besandr.repository.entities.Bookcase" />
+        <mapping class="com.besandr.repository.entities.Loan" />
+        <mapping class="com.besandr.repository.entities.Location" />
+        <mapping class="com.besandr.repository.entities.User" />
+    </session-factory>
+</hibernate-configuration>
+
+<!--<!DOCTYPE hibernate-configuration PUBLIC-->
+<!--        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"-->
+<!--        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">-->
+<!--<hibernate-configuration>-->
+<!--    <session-factory>-->
+<!--        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>-->
+<!--        <property name="connection.url">jdbc:mysql://localhost:3306/library_system?createDatabaseIfNotExist=true&amp;allowMultiQueries=true&amp;serverTimezone=UTC</property>-->
+<!--        <property name="connection.username">root</property>-->
+<!--        <property name="connection.password">12345</property>-->
+<!--        &lt;!&ndash; JDBC connection pool settings ... using built-in test pool &ndash;&gt;-->
+<!--        <property name="connection.pool_size">1</property>-->
+<!--        &lt;!&ndash; Select our SQL dialect &ndash;&gt;-->
+<!--        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>-->
+<!--        &lt;!&ndash; Echo the SQL to stdout &ndash;&gt;-->
+<!--        <property name="show_sql">true</property>-->
+<!--        &lt;!&ndash; Set the current session context &ndash;&gt;-->
+<!--        <property name="current_session_context_class">thread</property>-->
+<!--        &lt;!&ndash; Drop and re-create the database schema on startup &ndash;&gt;-->
+<!--        <property name="hbm2ddl.auto">create-drop</property>-->
+<!--        &lt;!&ndash; dbcp connection pool configuration &ndash;&gt;-->
+<!--        <property name="hibernate.dbcp.initialSize">5</property>-->
+<!--        <property name="hibernate.dbcp.maxTotal">20</property>-->
+<!--        <property name="hibernate.dbcp.maxIdle">10</property>-->
+<!--        <property name="hibernate.dbcp.minIdle">5</property>-->
+<!--        <property name="hibernate.dbcp.maxWaitMillis">-1</property>-->
+<!--        <mapping class="com.besandr.repository.entities.Author" />-->
+<!--        <mapping class="com.besandr.repository.entities.Book" />-->
+<!--        <mapping class="com.besandr.repository.entities.Keyword" />-->
+
+<!--    </session-factory>-->
+
+<!--</hibernate-configuration>-->
